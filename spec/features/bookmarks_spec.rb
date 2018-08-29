@@ -7,9 +7,9 @@ feature 'Bookmarks features' do
 
   scenario 'bookmarks route displays a list of bookmarks' do
     visit('/bookmarks')
-    expect(page).to have_content('User Stories: An Agile Introduction')
-    expect(page).to have_content('Writing user stories')
-    expect(page).to have_content('Feature tests')
+    expect(page).to have_content("http://destroyallsoftware.com")
+    expect(page).to have_content("http://www.google.com")
+    expect(page).to have_content("http://www.makersacademy.com")
   end
 
 end

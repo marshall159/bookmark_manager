@@ -1,11 +1,10 @@
+require 'pg'
+
 class Bookmarks
 
   def self.all
-    [
-      'User Stories: An Agile Introduction',
-      'Writing user stories',
-      'Feature tests'
-    ]
+    conn = PG.connect( dbname: 'bookmark_manager')
+    conn.exec( "SELECT * FROM bookmarks" ).map { |elem| elem["url"] }
   end
 
 end
