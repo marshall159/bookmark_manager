@@ -3,18 +3,18 @@ require './lib/bookmarks'
 
 class BookmarkManager < Sinatra::Base
 
+  before('/bookmarks') { @bookmarks = Bookmarks.all }
+
   get '/' do
     erb :index
   end
 
   get '/bookmarks' do
-    @bookmarks = Bookmarks.all
     erb :bookmarks
   end
 
   post '/bookmarks' do
-    @bookmarks = Bookmarks.all
-    # Bookmark.create(url: params)
+    Bookmarks.create(params[:new_bookmark])
     erb :bookmarks
   end
 
