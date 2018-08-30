@@ -7,6 +7,8 @@ require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
+require 'pg'
+require_relative './setup_test_database.rb'
 
 Capybara.app = BookmarkManager
 
@@ -33,6 +35,12 @@ SimpleCov.start
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
+  config.before(:example) do
+    truncate_test_database
+    setup_test_database
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
