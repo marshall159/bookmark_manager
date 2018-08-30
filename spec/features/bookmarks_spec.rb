@@ -1,3 +1,7 @@
+# if we require pg
+# we can insert data into our bookmark_manager_test database from
+# inside an it block
+
 feature 'Bookmarks features' do
 
   scenario 'homepage displays welcome message' do

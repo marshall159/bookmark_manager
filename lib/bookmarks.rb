@@ -8,7 +8,10 @@ class Bookmarks
     else
       database = 'bookmark_manager'
     end
+<<<<<<< HEAD
 
+=======
+>>>>>>> f145ff865d47c0f981ab04b5763adf862ccfa9ca
     conn = PG.connect( dbname: database)
     conn.exec( "SELECT * FROM bookmarks" ).map { |bookmark| bookmark["url"] }
   end
