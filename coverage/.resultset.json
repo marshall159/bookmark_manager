@@ -5,14 +5,6 @@
         1,
         null,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
         1,
         1,
         1,
@@ -21,15 +13,11 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/aneelmarshall/Projects/bookmark_manager/spec/features/bookmarks_spec.rb": [
-=======
-      "/Users/davidlawes/Projects/Aneel/bookmark_manager/spec/features/bookmarks_spec.rb": [
         null,
         null,
         null,
         null,
->>>>>>> f145ff865d47c0f981ab04b5763adf862ccfa9ca
         1,
         null,
         1,
@@ -40,17 +28,13 @@
         1,
         1,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         null,
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1535637684
-=======
-    "timestamp": 1535558139
->>>>>>> f145ff865d47c0f981ab04b5763adf862ccfa9ca
+    "timestamp": 1535639083
   }
 }
