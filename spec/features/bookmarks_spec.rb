@@ -16,4 +16,11 @@ feature 'Bookmarks features' do
     expect(page).to have_content("http://www.makersacademy.com")
   end
 
+  scenario 'add a new bookmark' do
+    visit('/bookmarks')
+    fill_in(:new_bookmark, with: 'http://football365.com')
+    click_button('Submit')
+    expect(page).to have_content('http://football365.com')
+  end
+
 end

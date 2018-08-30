@@ -9,7 +9,12 @@ class BookmarkManager < Sinatra::Base
 
   get '/bookmarks' do
     @bookmarks = Bookmarks.all
-    p ENV
+    erb :bookmarks
+  end
+
+  post '/bookmarks' do
+    @bookmarks = Bookmarks.all
+    # Bookmark.create(url: params)
     erb :bookmarks
   end
 

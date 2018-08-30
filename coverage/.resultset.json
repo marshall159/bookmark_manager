@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/aneelmarshall/Projects/bookmark_manager/spec/bookmarks_spec.rb": [
+      "/Users/joshnickson/Projects/aneel/bookmark_manager/spec/bookmarks_spec.rb": [
         1,
         null,
         1,
@@ -13,13 +13,20 @@
         null,
         null
       ],
-      "/Users/aneelmarshall/Projects/bookmark_manager/spec/features/bookmarks_spec.rb": [
+      "/Users/joshnickson/Projects/aneel/bookmark_manager/spec/features/bookmarks_spec.rb": [
         null,
         null,
         null,
         null,
         1,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         1,
         1,
         1,
@@ -35,6 +42,6 @@
         null
       ]
     },
-    "timestamp": 1535639674
+    "timestamp": 1535641139
   }
 }

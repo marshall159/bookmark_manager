@@ -7,3 +7,8 @@
     <li> <%= bookmark %></li>
   <% end %>
 </ul>
+
+<form action="/bookmarks" method="post">
+  <input type="text" name="new_bookmark">
+  <button value="submit">Submit</button>
+</form>
