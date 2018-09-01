@@ -23,4 +23,12 @@ feature 'Bookmarks features' do
     expect(page).to have_content('http://football365.com')
   end
 
+  scenario 'add an incorrect URL' do
+    visit('/bookmarks')
+    fill_in(:new_bookmark, with: 'football365')
+    click_button('Submit')
+    expect(page).to have_content('Invalid Bookmark')
+    expect(page).not_to have_content('football365')
+  end
+
 end

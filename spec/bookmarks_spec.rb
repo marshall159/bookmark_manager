@@ -16,6 +16,11 @@ describe Bookmarks do
       bookmarks = Bookmarks.all
       expect(bookmarks).to include("http://football365.com")
     end
+
+    it 'does not create a new bookmark if the URL is not valid' do
+      Bookmarks.create('not a real bookmark')
+      expect(Bookmarks.all).not_to include 'not a real bookmark'
+    end
   end
 
 end
