@@ -5,7 +5,7 @@ class Bookmarks
 
   def self.all
     connect_database
-    @conn.exec( "SELECT * FROM bookmarks" ).map { |bookmark| bookmark["url"] }
+    @conn.exec( "SELECT title, url FROM bookmarks" )#.map { |bookmark| bookmark['title'], bookmark['url'] }
   end
 
   # initialize with hash:

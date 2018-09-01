@@ -11,9 +11,12 @@ feature 'Bookmarks features' do
 
   scenario 'bookmarks route displays a list of bookmarks' do
     visit('/bookmarks')
-    expect(page).to have_content("http://destroyallsoftware.com")
-    expect(page).to have_content("http://www.google.com")
-    expect(page).to have_content("http://www.makersacademy.com")
+    expect(page).to have_content("Destroy all software")
+    expect(page).to have_content("Google homepage")
+    expect(page).to have_content("Makers rock")
+    expect(page).not_to have_content("http://destroyallsoftware.com")
+    expect(page).not_to have_content("http://www.google.com")
+    expect(page).not_to have_content("http://www.makersacademy.com")
   end
 
   scenario 'add a new bookmark' do
