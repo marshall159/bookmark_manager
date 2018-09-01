@@ -36,10 +36,12 @@ class Bookmarks
   # can also omit curly braces:
   # Object.new('Aneel', age: 53, hobby: 'fishing', birthplace: 'London')
 
-  def self.create(url)
+  # title:
+
+  def self.create(url:, title:)
     return false unless valid_url?(url)
     connect_database
-    @conn.exec( "INSERT INTO bookmarks(url) VALUES ('#{url}');" )
+    @conn.exec( "INSERT INTO bookmarks(url, title) VALUES('#{url}', '#{title}');" )
   end
 
   private
