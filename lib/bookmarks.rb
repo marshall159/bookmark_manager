@@ -8,6 +8,34 @@ class Bookmarks
     @conn.exec( "SELECT * FROM bookmarks" ).map { |bookmark| bookmark["url"] }
   end
 
+  # initialize with hash:
+  # def initialize(name,age,occupation,hobby,birthplace)
+  # @name = 53
+  # @age = etc
+  # @occupation =
+  # @hobby =
+  # @birthplace =
+  # instead passing a hash removes necessity of passing arguments in exact order
+  # also if we forget to pass in a value it will default to nil, not throw error
+  # def initialize( name, details = {} ) # give default empty hash if not provided
+  # so that no error thrown
+  # defaults = {age: 25, occupation: 'coder', hobby: 'coding', birthplace: 'Earth'}
+  # merge details to override defaults if provided:
+  # defaults.merge!(details)
+  # @name = name
+  # @age = defaults[:age]
+  # @occupation = defaults[:occupation]
+  # @hobby = defaults[:hobby]
+  # @birthplace = defaults[:birthplace]
+
+  # then pass in hash
+  # info = {age: 53, occupation: 'banker', hobby: 'fishing', birthplace: 'London'}
+  # Object.new('Aneel', info)
+  # or can pass in hash directly:
+  # Object.new('Aneel', {age: 53, hobby: 'fishing', birthplace: 'London'})
+  # can also omit curly braces:
+  # Object.new('Aneel', age: 53, hobby: 'fishing', birthplace: 'London')
+
   def self.create(url)
     return false unless valid_url?(url)
     connect_database
