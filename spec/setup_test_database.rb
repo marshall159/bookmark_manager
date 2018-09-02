@@ -10,5 +10,5 @@ def setup_test_database
   conn.exec( "INSERT INTO bookmarks (url, title)
               VALUES ('http://destroyallsoftware.com', 'Destroy all software'),
                       ('http://www.google.com', 'Google homepage'),
-                      ('http://www.makersacademy.com', 'Makers rocks') " )
+                      ('https://makers.tech', 'Makers rocks') " )
 end

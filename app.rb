@@ -11,7 +11,7 @@ class BookmarkManager < Sinatra::Base
     erb :index
   end
 
-  before('/bookmarks') { @bookmarks = Bookmarks.all }
+  before('/bookmarks') { @bookmarks = Bookmark.all }
 
   get '/bookmarks' do
     erb :bookmarks
@@ -20,7 +20,7 @@ class BookmarkManager < Sinatra::Base
   # url: params['url']
 
   post '/bookmarks' do
-    flash[:notice] = 'Invalid Bookmark' unless Bookmarks.create(url: params[:url], title: params[:title])
+    flash[:notice] = 'Invalid Bookmark' unless Bookmark.create(url: params[:url], title: params[:title])
     # erb :bookmarks
     redirect('/bookmarks')
   end

@@ -16,7 +16,7 @@ feature 'Bookmarks features' do
     expect(page).to have_content("Makers rock")
     expect(page).not_to have_content("http://destroyallsoftware.com")
     expect(page).not_to have_content("http://www.google.com")
-    expect(page).not_to have_content("http://www.makersacademy.com")
+    expect(page).not_to have_content("https://makers.tech")
   end
 
   scenario 'add a new bookmark' do
@@ -24,18 +24,7 @@ feature 'Bookmarks features' do
     fill_in(:url, with: 'http://football365.com')
     fill_in(:title, with: 'Football news')
     click_button('Submit')
-    expect(page).to have_content('Football news')
-    expect(page).not_to have_content('http://football365.com')
-  end
-
-  # Clicking a link in the list should open the url of the bookmark
-  scenario 'clicking a bookmark title displays its url' do
-    visit('/bookmarks')
-    fill_in(:url, with: 'http://football365.com')
-    fill_in(:title, with: 'Football news')
-    click_button('Submit')
-    click_link('Football news')
-    expect(page).to have_content('http://football365.com')
+    expect(page).to have_link('Football news', href: 'http://football365.com')
   end
 
   scenario 'add an incorrect URL' do
